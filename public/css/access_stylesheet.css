@@ -1,0 +1,118 @@
+form{
+    height: 280px;
+}
+
+.main{
+    border: 1px solid grey;
+    border-radius: 4px;
+    box-shadow: 2px 2px 12px darkslategray;
+    background: rgba(269, 269, 269, 1);
+    padding: 35px;
+    padding-top: 15px;
+    width: 450px;
+    height: 280px;
+    margin: 1.2vh 35vw 20vh 35vw;
+    z-index: 1;
+}
+
+.main hr{
+    margin-top: -13px;
+}
+
+.main p {
+    color: red;
+    font-style: italic;
+    height: 5px;
+}
+
+.main input{
+    width: 250px;
+    margin-left: 115px;
+    margin-top: 4px;
+}
+
+.main button{
+    position: relative;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(189, 189, 189, 0.75);
+    font-weight: bold;
+    font-size: 13px;
+    padding: 13px;
+    width: 90px;
+    margin-top: 30px;
+}
+.main button:hover{
+    background-color: rgba(189, 189, 189, 1);
+    cursor: pointer;
+}
+
+.input-email{
+    margin-right: 10px;
+}
+
+.main span{
+    height: 10px;
+}
+
+.main-button{
+    height: 15px;
+    width: 30px;
+}
+
+
+.top-menu{
+    position: relative;
+    border: none;
+    background: none;
+    font-weight: bold;
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+}
+
+.access-menu{
+    position: relative;
+    margin-left: 35vw;
+    margin-top: 25vh;
+    z-index: 0;
+}
+
+.top-menu:hover{
+    cursor: pointer;
+    color: cornflowerblue;
+}
+
+#register{
+    display: block;
+}
+
+#login{
+    display: none;
+}
+
+#register-name{
+    margin-top: 17px;
+    margin-left: 112px;
+}
+
+#login-email{
+    margin-top: 17px;
+    margin-left: 115px;
+}
+
+#register-password, #login-password{
+    margin-left: 85px;
+}
+
+#login-form button {
+    margin-top: 35px;
+}
+
+@media only screen and (max-width: 620px){
+    .main{
+        margin-left: 0;
+    }
+    .access-menu{
+        margin-left: 0;
+    }
+}

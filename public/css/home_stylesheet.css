@@ -1,0 +1,46 @@
+.main div{
+    height: 280px;
+}
+
+.main{
+    border: 1px solid grey;
+    border-radius: 4px;
+    box-shadow: 2px 2px 12px darkslategray;
+    background: rgba(269, 269, 269, 1);
+    padding: 35px;
+    padding-top: 15px;
+    width: 450px;
+    height: 280px;
+    margin: 1.2vh 35vw 20vh 35vw;
+    z-index: 1;
+}
+
+.top-menu{
+    position: relative;
+    border: none;
+    background: none;
+    font-weight: bold;
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+}
+
+.top-menu:hover{
+    cursor: pointer;
+    color: cornflowerblue;
+}
+
+.access-menu{
+    position: relative;
+    margin-left: 35vw;
+    margin-top: 25vh;
+    z-index: 0;
+}
+
+@media only screen and (max-width: 620px){
+    .main{
+        margin-left: 0;
+    }
+    .access-menu{
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Portal</title>
+    <link rel="stylesheet" href="./css/master_stylesheet.css">
+    <link rel="stylesheet" href="./css/access_stylesheet.css">
+</head>
+
+<body>
+    <section class="access-menu">
+        <button type="submit" class="top-menu" id="btn-register" onclick=showRegisterForm()>Register</button>
+        <button type="submit" class="top-menu" id="btn-login" onclick=showLoginForm()>Login</button>
+    </section>
+    <section class="main">
+        <h2 id="access-header">Create Account</h2>
+        <hr>
+        <p id="error"></p>
+        <section id="register">
+            <form id="register-form">
+                <span>Name</span>
+                <input type="text" id="register-name"><br>
+                <span>Email</span>
+                <input type="email" class="input-email" id="register-email"><br>
+                <span>Password</span>
+                <input type="password" id="register-password">
+                <br><br>
+                <button type="submit">Register</button>
+            </form>
+        </section>
+        <!--
+            
+        -->
+        <section id="login">
+            <form id="login-form">
+                <span>Email</span>
+                <input type="email" class="input-email" id="login-email">
+                <span>Password</span>
+                <input type="password" id="login-password">
+                <br><br><br>
+                <button type="submit">Login</button>
+            </form>
+        </section>
+    </section>
+    <script src="./access_portal.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./css/master_stylesheet.css">
+    <link rel="stylesheet" href="./css/home_stylesheet.css">
+</head>
+
+<body>
+    <section class="access-menu">
+        <button type="submit" class="top-menu" id="logout" onclick=logout()>Logout</button>
+    </section>
+    <section class="main">
+        <h1>Hello, <span id="name"></span></h1>
+        <span id="email"></span>
+        <br><br>
+        <p>Your Token ID: <span id="token"></span></p>
+        <br>
+        <p>Payload data: <span id="payload"></span></p>
+        <br>
+    </section>
+    </section>
+    <script src="./home.js"></script>
+
+</body>
+
+</html>
