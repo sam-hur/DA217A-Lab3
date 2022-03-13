@@ -31,5 +31,5 @@ app.use('/', pages);
 // Event listener for localhost server
 app.listen(PORT, () => {
     signale.info(`Server is running! See ${HOST}:${PORT}`);
-    // open(`${HOST}:${PORT}`);
+    open(`${HOST}:${PORT}`);
 }) 

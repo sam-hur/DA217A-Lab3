@@ -34,7 +34,7 @@ router.post("/register", async (req, res) => {
         password: hashPassword
     });
     try {
-        const savedUser = await user.save();
+        await user.save();
         const token = jwt.sign({ _id: user._id }, process.env.TOKEN_SECRET);
         res.json({ user: user._id, redirect: target, token });
         signale.success("Registration OK!");
@@ -55,6 +55,7 @@ router.post('/login', async (req, res) => {
 
     // if existing email
     const user = await User.findOne({ email: req.body.email });
+
     const validPassword = await bcrypt.compare(req.body.password, user.password);
 
     if (!user || !validPassword) {
@@ -66,9 +67,9 @@ router.post('/login', async (req, res) => {
     // create and assign a token to Frontend
     const token = jwt.sign({ _id: user._id }, process.env.TOKEN_SECRET);
     res.header('auth-token', token).json({ token, redirect: target });
-    signale.success('Login OK!');
     console.log(`Your authentication token is: ${token}`);
     console.log(`Your payload data is: ${Buffer.from(token.split('.')[1], 'base64')}`);
+    signale.success('Login OK!');
     login.isLoggedIn = true;
 });
 

@@ -7,7 +7,7 @@ function readData() {
     token = window.localStorage.getItem('auth-token');
     tokenhtml = `<a href="https://jwt.io/#debugger-io?token=${token}" target="_blank">${token}</a>`;
     document.querySelector('#token').innerHTML = tokenhtml; // write the hyperlinked, signed and encrypted token
-    
+
     // decode for payload data
     const payload = atob(token.split('.')[1]);
     const payload_split = payload.split(/([^{},:"]+)/);
