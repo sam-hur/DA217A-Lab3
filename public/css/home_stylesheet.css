@@ -1,3 +1,17 @@
+p{
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: -20px;
+    width: 450px;
+    height: auto;
+    overflow-wrap: break-word;
+}
+
+p span{
+    font-size: 13px;
+    font-weight: normal;
+}
+
 .main div{
     height: 280px;
 }

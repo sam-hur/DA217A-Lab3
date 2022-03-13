@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./css/home_stylesheet.css">
 </head>
 
-<body>
+<body onload=readData()>
     <section class="access-menu">
         <button type="submit" class="top-menu" id="logout" onclick=logout()>Logout</button>
     </section>
@@ -18,9 +18,9 @@
         <h1>Hello, <span id="name"></span></h1>
         <span id="email"></span>
         <br><br>
-        <p>Your Token ID: <span id="token"></span></p>
+        <p>Your Token ID: <br><span id="token"></span></p>
         <br>
-        <p>Payload data: <span id="payload"></span></p>
+        <p>Payload data: <br><span id="payload"></span></p>
         <br>
     </section>
     </section>

@@ -7,6 +7,7 @@ const open = require('open');
 const pages = require('./routes/pages');
 const authRoute = require('./routes/auth');
 const secureRoute = require('./routes/secure');
+
 const PORT = process.env.PORT || 30000;
 const HOST = "http://localhost";
 
@@ -30,5 +31,5 @@ app.use('/', pages);
 // Event listener for localhost server
 app.listen(PORT, () => {
     signale.info(`Server is running! See ${HOST}:${PORT}`);
-    open(`${HOST}:${PORT}`);
+    // open(`${HOST}:${PORT}`);
 }) 
