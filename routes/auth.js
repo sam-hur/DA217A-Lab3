@@ -7,6 +7,8 @@ const signale = require('signale');
 const target = 'home';
 const login = require('../public/control');
 
+const pk = process.env.TOKEN_SECRET || "awsedrfuhiiko34serdftgyu-hijokp234567890-=]'/'./}"
+
 router.post("/register", async (req, res) => {
 
     // Validate User
@@ -35,7 +37,7 @@ router.post("/register", async (req, res) => {
     });
     try {
         await user.save();
-        const token = jwt.sign({ _id: user._id }, process.env.TOKEN_SECRET);
+        const token = jwt.sign({ _id: user._id }, pk);
         res.json({ user: user._id, redirect: target, token });
         signale.success("Registration OK!");
         login.isLoggedIn = true;
@@ -65,7 +67,7 @@ router.post('/login', async (req, res) => {
     }
 
     // create and assign a token to Frontend
-    const token = jwt.sign({ _id: user._id }, process.env.TOKEN_SECRET);
+    const token = jwt.sign({ _id: user._id }, pk);
     res.header('auth-token', token).json({ token, redirect: target });
     console.log(`Your authentication token is: ${token}`);
     console.log(`Your payload data is: ${Buffer.from(token.split('.')[1], 'base64')}`);
