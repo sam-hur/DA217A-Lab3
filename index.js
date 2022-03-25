@@ -13,9 +13,10 @@ const HOST = "http://localhost";
 
 // Activate Dotenv
 dotenv.config();
+const env = process.env.DB_Connect || "mongodb+srv://samroot:sampass@sam-db.spny2.mongodb.net/DA217A-Lab3?retryWrites=true&w=majority"
 
 // Connect to database
-mongoose.connect(process.env.DB_Connect, { useNewUrlParser: true, useUnifiedTopology: true }, () => {
+mongoose.connect(env, { useNewUrlParser: true, useUnifiedTopology: true }, () => {
     signale.success('Connected to the Database!');
 });
 
